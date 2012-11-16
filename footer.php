@@ -12,10 +12,10 @@
 
   <footer id="footer">
     <?php wp_nav_menu(array(
-            "theme_location" => "footer",
+            "theme_location" => "secondary",
             "depth" => 1,
             "container"  => "nav",
-            "container_id" => "footer-nav"
+            "container_id" => "secondary-nav"
           )); ?>
   </footer><!--/#footer-->
 <?php wp_footer(); ?>

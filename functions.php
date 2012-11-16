@@ -54,17 +54,14 @@ function mi_setup() {
 
 	load_theme_textdomain( 'mi', get_stylesheet_directory() . '/languages' );
 
-	$locale = get_locale();
-	$locale_file = get_stylesheet_directory() . "/languages/$locale.php";
-	if ( is_readable( $locale_file ) )
-		require_once( $locale_file );
-
 	// Add default posts and comments RSS feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
 
 	// This theme uses wp_nav_menu() in one location.
-  if( function_exists('register_nav_menu') )
+  if( function_exists('register_nav_menu') ):
   	register_nav_menu( 'primary', __( 'Primary Menu','mi' ) );
+  	register_nav_menu( 'secondary', __( 'Secondary Menu','mi' ) );
+  endif;
 
 	// Add support for a variety of post formats
 	add_theme_support( 'post-formats', array( 'video', 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
