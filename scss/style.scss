@@ -1,0 +1,403 @@
+/*
+Theme Name: Mi
+Theme URI: http://upthemes.com/themes/mi-theme/
+Description: The most attractive minimalist theme ever made.
+Author: UpThemes
+Author URI: http://upthemes.com/
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: so minimal
+
+*/
+
+@import "compass/reset";
+@import "compass/css3";
+
+body { 
+  font: 18px/28px "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; 
+  background-color: #f8f8f8; 
+  color: #666666; 
+  text-align: center; 
+}
+
+a, 
+a:visited { 
+  color: #4878a8;
+}
+
+a:hover, 
+a:active { 
+  color: #315272;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-weight: bold; 
+}
+
+h1 { 
+  font-size: 1.5em; 
+}
+
+h2 { 
+  font-size: 1.3em; 
+}
+
+h3 { 
+  font-size: 1.2em; 
+}
+
+h4 { 
+  font-size: 1em;
+}
+
+h5,
+h6 { 
+  font-size: 1em; 
+  margin-bottom: 0; 
+}
+
+p, ol, ul { 
+  margin: 0 0 1.5em 0; 
+}
+
+li { 
+  margin-bottom: 1em; 
+}
+
+.page-header,
+.archive-header { 
+  padding: 40px 0; 
+}
+
+#masthead {
+  padding: 20px 0 0; 
+  background-color: #333333; 
+  color: #b3b3b3; 
+  background-position: center center; 
+  text-shadow: 0 2px 0 rgba(51, 51, 51, 0.3), 0 0 5px rgba(51, 51, 51, 0.5);
+
+  a {
+    color: white; 
+    font-weight: bold; 
+    text-decoration: none; 
+  }
+
+  .site-info {
+    margin: 60px 0;
+
+    #site-title { font-size: 1.4em; margin-bottom: 0; }
+    #site-description { font-size: .9em; font-family: Georgia, "Times New Roman", Times, serif; margin-bottom: 60px; }
+  }
+
+  nav { 
+    font-size: .65em; 
+
+    ul { 
+      margin-bottom: 0; 
+      background-color: #333333; 
+      background-color: rgba(51, 51, 51, 0.3); 
+      border-top: 1px solid rgba(51, 51, 51, 0.5);
+
+      li { 
+        display: inline-block; 
+        padding-top: 5px; 
+        padding-bottom: 5px; 
+        margin: 0;
+
+        a { 
+          color: white; 
+          display: block; 
+          padding: 2px 26px; 
+          text-decoration: none; 
+          text-transform: uppercase; 
+          font-weight: bold; 
+        }
+
+        a:hover { 
+          @include border-radius(40px); 
+          background-color: #666666; 
+          background-color: rgba(102, 102, 102, 0.5); 
+          text-shadow: 0 1px 0 rgba(51, 51, 51, 0.6);
+        }
+      }
+    }
+  }
+}
+
+.post-content {
+  font-family: Georgia, "Times New Roman", Times, serif; 
+  margin-bottom: 1em; 
+}
+
+article img { 
+  max-width: 100%; 
+  height: auto;
+}
+
+.hentry, .post { 
+  padding: 80px; 
+  border-top: 1px solid #333; 
+  border-top-color: rgba(51, 51, 51, 0.1);
+
+  & > div{
+    max-width: 840px; 
+    margin: 0 auto;
+  }
+
+  .wp-post-image{
+    margin-bottom: 1em; 
+    @include border-radius(3px);
+    @include box-shadow(0 2px 0 rgba(0, 0, 0, 0.1));
+  }
+
+  .entry-title { 
+    margin-bottom: 1em;
+
+    a { 
+      text-decoration: none; 
+    }
+  }
+
+  .post-meta { 
+    color: #b3b3b3; 
+    font-size: .8em; 
+
+    a { 
+      color: #b3b3b3;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.format-image > div { 
+  max-width: 100%; 
+  padding-left: 20px; 
+  padding-right: 20px; 
+}
+
+.format-quote {
+  .entry-title { 
+    font-size: .85em; 
+    margin-bottom: 2em;
+
+    &, a {
+      color: #999999; 
+    }
+  }
+
+  .post-content {
+    font-size: 1.8em; 
+    line-height: 1.4em; 
+  }
+}
+
+.format-aside,
+.format-status{
+  .entry-title { 
+    font-size: .85em; 
+    margin-bottom: 2em; 
+  }
+
+  a {
+    color: #999999; 
+  }
+
+  .post-content { 
+    font-size: 1.4em; 
+    line-height: 1.4em; 
+  }
+}
+
+.format-link { 
+  background-color: #4878a8; 
+  padding: 35px 0; 
+  @include box-shadow(inset 0 4px 0 rgba(51, 51, 51, 0.15));
+
+  p:last-child{
+    margin-bottom: 0;
+  }
+
+  .post-content {
+    font-size: 30px;
+
+    a { 
+      color: white; 
+      display: inline-block; 
+      background-color: #3c648b; 
+      padding: 22px 27px; 
+      text-decoration: none; 
+      @include text-shadow(0 2px 0 rgba(51, 51, 51, 0.6));
+      @include border-radius(8px);
+      @include transition(150ms all linear);
+
+      &:hover {
+        background-color: white; 
+        color: #4878a8; 
+        text-shadow: none;
+      }
+    }
+
+    .post-meta {
+      display: none;
+    }
+  }
+}
+
+.format-video > div {
+  max-width: 880px;
+}
+
+.navigation {
+  border-top: 1px solid #333333; 
+  border-top-color: rgba(51, 51, 51, 0.1); 
+  overflow: auto; 
+  width: 100%; 
+  font-size: .8em;
+
+  a {
+    display: block; 
+    text-decoration: none; 
+    padding: 25px 10px; 
+    text-transform: capitalize; 
+    font-weight: bold; 
+  }
+
+  & > div {
+    width: 49.9%;
+    margin: 0;
+  }
+
+}
+
+#single, 
+#image-navigation { 
+  border-top: none; 
+  background-color: white;
+
+  a { 
+    background-color: white; 
+  }
+}
+
+#footer {
+  border-top: 1px solid #333333; 
+  border-top-color: rgba(51, 51, 51, 0.1); 
+  padding: 60px 0; 
+  font-size: .8em;
+
+  li {
+    display: inline-block;
+
+    a {
+      padding: 25px; 
+      text-decoration: none;
+    }
+  }
+}
+
+#author-info { 
+  border-top: 1px solid #333333; 
+  border-top-color: rgba(51, 51, 51, 0.1); 
+  padding: 40px; 
+
+  .avatar {
+    @include border-radius(4px);
+  }
+
+  #author-description { 
+    font-size: .9em; 
+    line-height: 1.3em; 
+    max-width: 480px; 
+    margin: 0 auto;
+
+    h2 { 
+      font-size: 1em; 
+      margin-bottom: 1em;
+    }
+  }
+}
+
+#sidebar{
+  border-top: 1px solid #333333; 
+  border-top-color: rgba(51, 51, 51, 0.1); 
+  overflow: auto;
+  padding: 40px;
+
+  .widget{
+    float: left;
+    width: 33%;
+    font-size: .9em;
+
+    .widgettitle{
+      font-size: 1em;
+      margin-bottom: 1em;
+    }
+
+    ul,li{
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.attachment{
+ .entry-content {
+    margin-bottom: 1em; 
+  }
+  .entry-meta { 
+    font-size: .85em; 
+    margin-bottom: 1em; 
+  }
+}
+
+.sticky { 
+  background-color: #a8d8f0; 
+  color: white; 
+}
+
+.bypostauthor { 
+  background-color: #487890; 
+  color: white; 
+}
+
+.assistive-text { 
+  display: none; 
+}
+
+.wp-caption { 
+  font-size: .9em; 
+}
+
+.wp-caption-text { 
+  padding: .5em 0; 
+}
+
+.gallery-caption { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  right: 0; 
+  background: #333333; 
+  background: rgba(51, 51, 51, 0.9); 
+  color: white; 
+  padding: 4px; 
+  font-size: .84em; 
+}
+
+.alignright { 
+  float: right; 
+  margin: 0 0 1em 1em; 
+}
+
+.alignleft { 
+  float: left; 
+  margin: 0 1em 1em 0; 
+}
+
+.aligncenter { 
+  float: none; 
+  text-align: center; 
+  margin: 0 auto; 
+}
