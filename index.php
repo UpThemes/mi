@@ -30,4 +30,5 @@
 
 <?php mi_content_nav('index'); ?>
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

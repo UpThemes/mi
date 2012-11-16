@@ -8,6 +8,7 @@
  */
 ?>
 
+<?php if( is_active_sidebar(1) ): ?>
 <aside id="sidebar" class="clearfix">
   <ul class="widgets">
   <?php if( !dynamic_sidebar() ): ?>
@@ -23,3 +24,4 @@
   <?php endif; ?>
   </ul>
 </aside><!--/#sidebar-->
+<?php endif; ?>

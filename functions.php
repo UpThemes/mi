@@ -26,13 +26,14 @@
 * @since Mi 1.0
 */
 
+/* Loads the custom header functionality. */
 include('inc/custom-header.php');
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 1120;
+	$content_width = 860;
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -43,7 +44,7 @@ if ( ! isset( $content_width ) )
  * @uses register_nav_menu() To add support for navigation menus.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since UpThemes 1.0
+ * @since Mi 1.0
  */
 function mi_setup() {
 
@@ -77,6 +78,13 @@ function mi_setup() {
 
 add_action( 'after_setup_theme', 'mi_setup' );
 
+/**
+ * Displays the header image as a background for the whole header section.
+ *
+ * @uses get_header_image() For displaying the header image as a background.
+ *
+ * @since Mi 1.0
+ */
 function mi_get_header_image(){
   if( get_header_image() ):
     echo ' style="background-image:url('.get_header_image().'); color: white;"';
@@ -122,20 +130,13 @@ function mi_post_nav() {
 }
 endif;
 
+/**
+ * Enqueues all styles and scripts.
+ *
+ * @since Mi 1.0
+ */
 function mi_enqueue_scripts(){
-  wp_enqueue_script('view', get_template_directory_uri() . "/assets/js/view.js?auto", array('jquery') );
-  wp_enqueue_script('fitvids', get_template_directory_uri() . "/assets/js/fitvids.js", array('jquery') );
-  wp_enqueue_script('fittext', get_template_directory_uri() . "/assets/js/fittext.js", array('jquery') );
-  wp_enqueue_script('main', get_template_directory_uri() . "/assets/js/main.js", array('view','fitvids','fittext') );
-  wp_enqueue_style('style', get_template_directory_uri() . "/style.css", false );
+  wp_enqueue_style('mi-style', get_template_directory_uri() . "/style.css", false );
 }
 
-add_action('wp_enqueue_scripts','mi_enqueue_scripts',9999);
-
-function mi_post_navigation(){
-?>
-<div class="navigation">
-  <?php posts_nav_link('&#8734;','&larr; Newer','Older &rarr;'); ?>
-</div>
-<?php
-}
+add_action('wp_enqueue_scripts','mi_enqueue_scripts');
