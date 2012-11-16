@@ -26,7 +26,7 @@
     <header id="masthead"<?php mi_get_header_image(); ?>>
 
       <div class="site-info">
-        <div id="site-title"><a href="http://solo"><?php bloginfo('title'); ?></a></div>
+        <div id="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo('title'); ?></a></div>
         <div id="site-description"><?php bloginfo('description'); ?></div>
       </div>
 
