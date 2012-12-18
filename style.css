@@ -133,3 +133,8 @@ article img { max-width: 100%; height: auto; }
 .alignleft { float: left; margin: 0 1em 1em 0; }
 
 .aligncenter { float: none; text-align: center; margin: 0 auto; }
+
+@media only screen and (max-width: 480px) { .hentry, .post { padding: 30px; }
+  blockquote p { margin: 0; font-size: .75em; line-height: 1.25em; }
+  #sidebar .widget { width: 100%; float: none; margin: 0 0 30px 0; }
+  .format-link .post-content { font-size: 24px; } }
