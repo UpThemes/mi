@@ -20,23 +20,26 @@ $gray : #999999;
 $lightGray : #999999;
 $white : white;
 
+$body-font-size: 16px;
+$line-height: $body-font-size*1.6;
+
 $bodyFontFamily : Georgia, "Times New Roman", Times, serif;
 $headingFontFamily : "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 
 body {
-  font: 18px/28px $bodyFontFamily; 
-  background-color: #f8f8f8; 
-  color: #666666; 
-  text-align: center; 
+  font: $body-font-size/$line-height $bodyFontFamily;
+  background-color: #f8f8f8;
+  color: #666666;
+  text-align: center;
 }
 
-a, 
-a:visited { 
+a,
+a:visited {
   color: $primaryColor;
 }
 
-a:hover, 
-a:active { 
+a:hover,
+a:active {
   color: darken($primaryColor,10%);
 }
 
@@ -45,53 +48,53 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-h1 { 
-  font-size: 1.5em; 
+h1 {
+  font-size: 1.5em;
 }
 
-h2 { 
-  font-size: 1.3em; 
+h2 {
+  font-size: 1.3em;
 }
 
-h3 { 
-  font-size: 1.2em; 
+h3 {
+  font-size: 1.2em;
 }
 
-h4 { 
+h4 {
   font-size: 1em;
 }
 
 h5,
-h6 { 
-  font-size: 1em; 
-  margin-bottom: 0; 
+h6 {
+  font-size: 1em;
+  margin-bottom: 0;
 }
 
-p, ol, ul { 
-  margin: 0 0 1.5em 0; 
+p, ol, ul {
+  margin: 0 0 1.5em 0;
 }
 
-li { 
-  margin-bottom: 1em; 
+li {
+  margin-bottom: 1em;
 }
 
 .page-header,
-.archive-header { 
-  padding: 40px 0; 
+.archive-header {
+  padding: 40px 0;
 }
 
 #masthead {
-  padding: 20px 0 0; 
+  padding: 70px 0 0;
   background-color: $secondaryColor;
   font-family: $headingFontFamily;
-  color: $lightGray; 
-  background-position: center center; 
+  color: $lightGray;
+  background-position: center center;
   text-shadow: 0 2px 0 rgba(51, 51, 51, 0.3), 0 0 5px rgba(51, 51, 51, 0.5);
 
   a {
-    color: $white; 
-    font-weight: bold; 
-    text-decoration: none; 
+    color: $white;
+    font-weight: bold;
+    text-decoration: none;
   }
 
   .site-info {
@@ -102,80 +105,80 @@ li {
   }
 
   nav#primary-nav,
-  div.menu { 
-    font-size: .65em; 
+  div.menu {
+    font-size: .65em;
+    max-width: 980px;
+    margin-bottom: 30px;
 
-    ul { 
-      margin-bottom: 0; 
-      background-color: $secondaryColor; 
-      background-color: rgba(51, 51, 51, 0.3); 
+    ul {
+      margin-bottom: 0;
       border-top: 1px solid rgba(51, 51, 51, 0.5);
 
-      li { 
-        display: inline-block; 
-        padding-top: 5px; 
-        padding-bottom: 5px; 
+      li {
+        display: inline-block;
+        padding-top: 5px;
+        padding-bottom: 5px;
         margin: 0;
 
-        a { 
-          color: $white; 
-          display: block; 
-          padding: 2px 26px; 
-          text-decoration: none; 
-          text-transform: uppercase; 
-          font-weight: bold; 
+        a {
+          color: $white;
+          display: block;
+          padding: 2px 26px;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: bold;
+
+          &:hover {
+            background-color: #666666;
+            background-color: rgba(102, 102, 102, 0.5);
+            text-shadow: 0 1px 0 rgba(51, 51, 51, 0.6);
+          }
         }
 
-        a:hover { 
-          @include border-radius(40px); 
-          background-color: #666666; 
-          background-color: rgba(102, 102, 102, 0.5); 
-          text-shadow: 0 1px 0 rgba(51, 51, 51, 0.6);
-        }
       }
     }
   }
 }
 
 .post-content {
-  margin-bottom: 1em; 
+  margin-bottom: $line-height;
 }
 
-article img { 
-  max-width: 100%; 
+article img {
+  max-width: 100%;
   height: auto;
 }
 
-.hentry, .post { 
-  padding: 80px; 
-  border-top: 1px solid $secondaryColor; 
+.hentry, .post {
+  padding: 40px 80px;
+  border-top: 1px solid $secondaryColor;
   border-top-color: rgba(51, 51, 51, 0.1);
 
   & > div{
-    max-width: 840px; 
+    max-width: 760px;
     margin: 0 auto;
   }
 
   .wp-post-image{
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
     @include border-radius(3px);
     @include box-shadow(0 2px 0 rgba(0, 0, 0, 0.1));
   }
 
-  .entry-title { 
-    margin-bottom: 1em;
+  .entry-title {
+    margin-bottom: $line-height;
 
-    a { 
-      text-decoration: none; 
+    a {
+      text-decoration: none;
     }
   }
 
-  .post-meta { 
-    color: $lightGray; 
-    font-size: .8em; 
-    font-family: $headingFontFamily; 
+  .post-meta {
+    color: $lightGray;
+    font-size: .8em;
+    font-family: $headingFontFamily;
 
-    a { 
+    a {
       color: $lightGray;
       text-decoration: none;
     }
@@ -183,48 +186,48 @@ article img {
 
 }
 
-.format-image > div { 
-  max-width: 100%; 
-  padding-left: 20px; 
-  padding-right: 20px; 
+.format-image > div {
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .format-quote {
-  .entry-title { 
-    font-size: .85em; 
+  .entry-title {
+    font-size: .85em;
     margin-bottom: 2em;
 
     &, a {
-      color: $gray; 
+      color: $gray;
     }
   }
 
   .post-content {
-    font-size: 1.8em; 
-    line-height: 1.4em; 
+    font-size: 1.8em;
+    line-height: 1.4em;
   }
 }
 
 .format-aside,
 .format-status{
-  .entry-title { 
-    font-size: .85em; 
-    margin-bottom: 2em; 
+  .entry-title {
+    font-size: .85em;
+    margin-bottom: 2em;
   }
 
   a {
-    color: $gray; 
+    color: $gray;
   }
 
-  .post-content { 
-    font-size: 1.4em; 
-    line-height: 1.4em; 
+  .post-content {
+    font-size: 1.4em;
+    line-height: 1.4em;
   }
 }
 
-.format-link { 
-  background-color: $primaryColor; 
-  padding: 35px 0; 
+.format-link {
+  background-color: $primaryColor;
+  padding: 35px 0;
   @include box-shadow(inset 0 4px 0 rgba(51, 51, 51, 0.15));
 
   p:last-child{
@@ -234,19 +237,19 @@ article img {
   .post-content {
     font-size: 30px;
 
-    a { 
-      color: $white; 
-      display: inline-block; 
-      background-color: #3c648b; 
-      padding: 22px 27px; 
-      text-decoration: none; 
+    a {
+      color: $white;
+      display: inline-block;
+      background-color: #3c648b;
+      padding: 22px 27px;
+      text-decoration: none;
       @include text-shadow(0 2px 0 rgba(51, 51, 51, 0.6));
       @include border-radius(8px);
       @include transition(150ms all linear);
 
       &:hover {
-        background-color: $white; 
-        color: $primaryColor; 
+        background-color: $white;
+        color: $primaryColor;
         text-shadow: none;
       }
     }
@@ -258,19 +261,19 @@ article img {
 }
 
 .navigation {
-  font-family: $headingFontFamily; 
-  border-top: 1px solid $secondaryColor; 
-  border-top-color: rgba(51, 51, 51, 0.1); 
-  overflow: auto; 
-  width: 100%; 
-  font-size: .8em;
+  font-family: $headingFontFamily;
+  border-top: 1px solid $secondaryColor;
+  border-top-color: rgba(51, 51, 51, 0.1);
+  overflow: auto;
+  width: 100%;
+  font-size: $line-height * .8;
 
   a {
-    display: block; 
-    text-decoration: none; 
-    padding: 25px 10px; 
-    text-transform: capitalize; 
-    font-weight: bold; 
+    display: block;
+    text-decoration: none;
+    padding: 25px 10px;
+    text-transform: capitalize;
+    font-weight: bold;
   }
 
   & > div {
@@ -280,57 +283,62 @@ article img {
 
 }
 
-#single, 
-#image-navigation { 
-  border-top: none; 
+#single,
+#image-navigation {
+  border-top: none;
   background-color: $white;
 
-  a { 
-    background-color: $white; 
+  a {
+    background-color: $white;
   }
 }
 
 #footer {
-  border-top: 1px solid $secondaryColor; 
-  border-top-color: rgba(51, 51, 51, 0.1); 
-  padding: 60px 0; 
+  border-top: 1px solid $secondaryColor;
+  border-top-color: rgba(51, 51, 51, 0.1);
+  padding: 20px 0 0;
   font-size: .8em;
+
+  ul{
+    margin: 0;
+    padding: 0;
+  }
 
   li {
     display: inline-block;
 
     a {
-      padding: 25px; 
+      padding: 25px;
       text-decoration: none;
     }
   }
 }
 
-#author-info { 
-  border-top: 1px solid $secondaryColor; 
-  border-top-color: rgba(51, 51, 51, 0.1); 
-  padding: 40px; 
+#author-info {
+  border-top: 1px solid $secondaryColor;
+  border-top-color: rgba(51, 51, 51, 0.1);
+  padding: 40px;
 
   .avatar {
     @include border-radius(4px);
   }
 
-  #author-description { 
-    font-size: .9em; 
-    line-height: 1.3em; 
-    max-width: 480px; 
+  #author-description {
+    font-size: .9em;
+    line-height: 1.3em;
+    max-width: 480px;
     margin: 0 auto;
 
-    h2 { 
-      font-size: 1em; 
+    h2 {
+      font-size: 1em;
       margin-bottom: 1em;
     }
   }
 }
 
 #sidebar{
-  border-top: 1px solid $secondaryColor; 
-  border-top-color: rgba(51, 51, 51, 0.1); 
+  border-top: 1px solid $secondaryColor;
+  border-top-color: rgba(51, 51, 51, 0.1);
   overflow: auto;
   padding: 40px;
 
@@ -353,64 +361,64 @@ article img {
 
 .attachment{
  .entry-content {
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
   }
-  .entry-meta { 
-    font-size: .85em; 
-    margin-bottom: 1em; 
+  .entry-meta {
+    font-size: .85em;
+    margin-bottom: 1em;
   }
 }
 
-.sticky { 
-  background-color: #eee; 
-  color: $white; 
+.sticky {
+  background-color: #eee;
+  color: $white;
 }
 
-.bypostauthor { 
-  background-color: #eee; 
-  color: $white; 
+.bypostauthor {
+  background-color: #eee;
+  color: $white;
 }
 
-.assistive-text { 
-  display: none; 
+.assistive-text {
+  display: none;
 }
 
-.wp-caption { 
-  font-size: .9em; 
+.wp-caption {
+  font-size: .9em;
 }
 
-.wp-caption-text { 
+.wp-caption-text {
   padding: 0 0 .5em 0;
   color: #aaa;
   border-bottom: 1px dashed #ddd;
 }
 
-.gallery-caption { 
-  position: absolute; 
-  bottom: 0; 
-  left: 0; 
-  right: 0; 
-  background: $secondaryColor; 
-  background: rgba(51, 51, 51, 0.9); 
-  color: $white; 
-  padding: 4px; 
-  font-size: .84em; 
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $secondaryColor;
+  background: rgba(51, 51, 51, 0.9);
+  color: $white;
+  padding: 4px;
+  font-size: .84em;
 }
 
-.alignright { 
-  float: right; 
-  margin: 0 0 1em 1em; 
+.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
 }
 
-.alignleft { 
-  float: left; 
-  margin: 0 1em 1em 0; 
+.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
 }
 
-.aligncenter { 
-  float: none; 
-  text-align: center; 
-  margin: 0 auto; 
+.aligncenter {
+  float: none;
+  text-align: center;
+  margin: 0 auto;
 }
 
 // Mobile Styles
