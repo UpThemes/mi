@@ -27,7 +27,7 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
-body { font: 0.625 Georgia, "Times New Roman", Times, serif; background-color: #f8f8f8; color: #666666; text-align: center; }
+body { font: 18px/28px Georgia, "Times New Roman", Times, serif; background-color: #f8f8f8; color: #666666; text-align: center; }
 
 a, a:visited { color: #4878a8; }
 
@@ -35,25 +35,23 @@ a:hover, a:active { color: #395e84; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; font-weight: bold; }
 
-h1 { font-size: 24px; }
+h1 { font-size: 1.5em; }
 
-h2 { font-size: 20.8px; }
+h2 { font-size: 1.3em; }
 
-h3 { font-size: 19.2px; }
+h3 { font-size: 1.2em; }
 
-h4 { font-size: 16px; }
+h4 { font-size: 1em; }
 
-h5, h6 { font-size: 16px; margin-bottom: 0; }
+h5, h6 { font-size: 1em; margin-bottom: 0; }
 
-p { font-size: 16px; line-height: 25.6px; }
+p, ol, ul { margin: 0 0 1.5em 0; }
 
-p, ol, ul { margin: 0 0 25.6px 0; }
-
-li { margin-bottom: 25.6px; }
+li { margin-bottom: 1em; }
 
 .page-header, .archive-header { padding: 40px 0; }
 
-#masthead { padding: 20px 0 0; background-color: #333333; font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; color: #999999; background-position: center center; text-shadow: 0 2px 0 rgba(51, 51, 51, 0.3), 0 0 5px rgba(51, 51, 51, 0.5); }
+#masthead { padding: 80px 0 0; background-color: #333333; font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; color: #999999; background-position: center center; text-shadow: 0 2px 0 rgba(51, 51, 51, 0.3), 0 0 5px rgba(51, 51, 51, 0.5); }
 #masthead a { color: white; font-weight: bold; text-decoration: none; }
 #masthead .site-info { margin: 60px 0; }
 #masthead .site-info #site-title { font-size: 1.4em; margin-bottom: 0; }
@@ -64,14 +62,14 @@ li { margin-bottom: 25.6px; }
 #masthead nav#primary-nav ul li a, #masthead div.menu ul li a { color: white; display: block; padding: 2px 26px; text-decoration: none; text-transform: uppercase; font-weight: bold; }
 #masthead nav#primary-nav ul li a:hover, #masthead div.menu ul li a:hover { -webkit-border-radius: 40px; -moz-border-radius: 40px; -ms-border-radius: 40px; -o-border-radius: 40px; border-radius: 40px; background-color: #666666; background-color: rgba(102, 102, 102, 0.5); text-shadow: 0 1px 0 rgba(51, 51, 51, 0.6); }
 
-.post-content { margin-bottom: 25.6px; }
+.post-content { margin-bottom: 1em; }
 
 article img { max-width: 100%; height: auto; }
 
-.hentry, .post { padding: 40px 80px; border-top: 1px solid #333333; border-top-color: rgba(51, 51, 51, 0.1); }
-.hentry > div, .post > div { max-width: 760px; margin: 0 auto; }
+.hentry, .post { padding: 40px 0; border-top: 1px solid #333333; border-top-color: rgba(51, 51, 51, 0.1); }
+.hentry > div, .post > div { max-width: 840px; margin: 0 auto; }
 .hentry .wp-post-image, .post .wp-post-image { margin-bottom: 1em; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
-.hentry .entry-title, .post .entry-title { margin-bottom: 25.6px; }
+.hentry .entry-title, .post .entry-title { margin-bottom: 1em; }
 .hentry .entry-title a, .post .entry-title a { text-decoration: none; }
 .hentry .post-meta, .post .post-meta { color: #999999; font-size: .8em; font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; }
 .hentry .post-meta a, .post .post-meta a { color: #999999; text-decoration: none; }
@@ -94,15 +92,14 @@ article img { max-width: 100%; height: auto; }
 
 .format-video > div { max-width: 880px; }
 
-.navigation { font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; border-top: 1px solid #333333; border-top-color: rgba(51, 51, 51, 0.1); overflow: auto; width: 100%; font-size: 20.48px; }
+.navigation { font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; border-top: 1px solid #333333; border-top-color: rgba(51, 51, 51, 0.1); overflow: auto; width: 100%; font-size: .8em; }
 .navigation a { display: block; text-decoration: none; padding: 25px 10px; text-transform: capitalize; font-weight: bold; }
 .navigation > div { width: 49.9%; margin: 0; }
 
 #single, #image-navigation { border-top: none; background-color: white; }
 #single a, #image-navigation a { background-color: white; }
 
-#footer { border-top: 1px solid #333333; border-top-color: rgba(51, 51, 51, 0.1); padding: 20px 0 0; font-size: .8em; }
-#footer ul { margin: 0; padding: 0; }
+#footer { border-top: 1px solid #333333; border-top-color: rgba(51, 51, 51, 0.1); padding: 60px 0; font-size: .8em; }
 #footer li { display: inline-block; }
 #footer li a { padding: 25px; text-decoration: none; }
 
