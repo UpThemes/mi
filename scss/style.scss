@@ -49,33 +49,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: $body-font-size*2;
 }
 
 h2 {
-  font-size: 1.3em;
+  font-size: $body-font-size*1.5;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: $body-font-size*1.2;
 }
 
 h4 {
-  font-size: 1em;
+  font-size: $body-font-size;
 }
 
 h5,
 h6 {
-  font-size: 1em;
+  font-size: $body-font-size;
   margin-bottom: 0;
 }
 
 p, ol, ul {
-  margin: 0 0 1.5em 0;
+  font-size: $body-font-size;
+  line-height: $line-height;
+  margin: 0 0 $line-height 0;
 }
 
 li {
-  margin-bottom: 1em;
+  margin-bottom: $line-height;
 }
 
 .page-header,
@@ -100,30 +102,28 @@ li {
   .site-info {
     margin: 60px 0;
 
-    #site-title { font-size: 1.4em; margin-bottom: 0; }
-    #site-description { font-size: .9em; font-family: $bodyFontFamily; margin-bottom: 60px; }
+    #site-title { font-size: 1.4em; margin-bottom: $line-height*.25; }
+    #site-description { font-size: .9em; font-family: $bodyFontFamily; margin-bottom: 70px; }
   }
 
   nav#primary-nav,
   div.menu {
     font-size: .65em;
-    max-width: 980px;
-    margin-bottom: 30px;
+    max-width: 660px;
 
     ul {
       margin-bottom: 0;
-      border-top: 1px solid rgba(51, 51, 51, 0.5);
+      border-top: 1px solid rgba(255,255,255,.5);
 
       li {
         display: inline-block;
-        padding-top: 5px;
-        padding-bottom: 5px;
         margin: 0;
 
         a {
           color: $white;
           display: block;
-          padding: 2px 26px;
+          padding: 20px 10px;
+          line-height: 1em;
           text-decoration: none;
           text-transform: uppercase;
           font-weight: bold;
