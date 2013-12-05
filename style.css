@@ -35,9 +35,9 @@ a:hover, a:active { color: #395e84; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; font-weight: bold; }
 
-h1 { font-size: 32px; }
+h1 { font-size: 24px; }
 
-h2 { font-size: 24px; }
+h2 { font-size: 20.8px; }
 
 h3 { font-size: 19.2px; }
 
@@ -51,16 +51,16 @@ li { margin-bottom: 25.6px; }
 
 .page-header, .archive-header { padding: 40px 0; }
 
-#masthead { padding: 70px 0 0; background-color: #333333; font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; color: #999999; background-position: center center; text-shadow: 0 2px 0 rgba(51, 51, 51, 0.3), 0 0 5px rgba(51, 51, 51, 0.5); }
+#masthead { padding: 20px 0 0; background-color: #333333; font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; color: #999999; background-position: center center; text-shadow: 0 2px 0 rgba(51, 51, 51, 0.3), 0 0 5px rgba(51, 51, 51, 0.5); }
 #masthead a { color: white; font-weight: bold; text-decoration: none; }
 #masthead .site-info { margin: 60px 0; }
-#masthead .site-info #site-title { font-size: 1.4em; margin-bottom: 6.4px; }
-#masthead .site-info #site-description { font-size: .9em; font-family: Georgia, "Times New Roman", Times, serif; margin-bottom: 70px; }
-#masthead nav#primary-nav, #masthead div.menu { font-size: .65em; max-width: 660px; }
-#masthead nav#primary-nav ul, #masthead div.menu ul { margin-bottom: 0; border-top: 1px solid rgba(255, 255, 255, 0.5); }
-#masthead nav#primary-nav ul li, #masthead div.menu ul li { display: inline-block; margin: 0; }
-#masthead nav#primary-nav ul li a, #masthead div.menu ul li a { color: white; display: block; padding: 20px 10px; line-height: 1em; text-decoration: none; text-transform: uppercase; font-weight: bold; }
-#masthead nav#primary-nav ul li a:hover, #masthead div.menu ul li a:hover { background-color: #666666; background-color: rgba(102, 102, 102, 0.5); text-shadow: 0 1px 0 rgba(51, 51, 51, 0.6); }
+#masthead .site-info #site-title { font-size: 1.4em; margin-bottom: 0; }
+#masthead .site-info #site-description { font-size: .9em; font-family: Georgia, "Times New Roman", Times, serif; margin-bottom: 60px; }
+#masthead nav#primary-nav, #masthead div.menu { font-size: .65em; }
+#masthead nav#primary-nav ul, #masthead div.menu ul { margin-bottom: 0; background-color: #333333; background-color: rgba(51, 51, 51, 0.3); border-top: 1px solid rgba(51, 51, 51, 0.5); }
+#masthead nav#primary-nav ul li, #masthead div.menu ul li { display: inline-block; padding-top: 5px; padding-bottom: 5px; margin: 0; }
+#masthead nav#primary-nav ul li a, #masthead div.menu ul li a { color: white; display: block; padding: 2px 26px; text-decoration: none; text-transform: uppercase; font-weight: bold; }
+#masthead nav#primary-nav ul li a:hover, #masthead div.menu ul li a:hover { -webkit-border-radius: 40px; -moz-border-radius: 40px; -ms-border-radius: 40px; -o-border-radius: 40px; border-radius: 40px; background-color: #666666; background-color: rgba(102, 102, 102, 0.5); text-shadow: 0 1px 0 rgba(51, 51, 51, 0.6); }
 
 .post-content { margin-bottom: 25.6px; }
 
