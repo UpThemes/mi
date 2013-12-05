@@ -70,9 +70,12 @@ h6 {
   margin-bottom: 0;
 }
 
-p, ol, ul {
+p{
   font-size: $body-font-size;
   line-height: $line-height;
+}
+
+p, ol, ul {
   margin: 0 0 $line-height 0;
 }
 
